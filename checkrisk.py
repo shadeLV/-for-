@@ -78,7 +78,7 @@ def domain_check():
                 rdm = rdm.strip()
                 rdm_extract = tldextract.extract(rdm)
                 rdm_root_domain = f"{rdm_extract.domain}.{rdm_extract.suffix}"
-                domain_ck_list += ("domain:" + rdm_root_domain + " OR ")
+                domain_ck_list += ("domain:*." + rdm_root_domain + " OR ")
 
                 for bdm in bdomains:
                     bdm = tldextract.extract(bdm)
